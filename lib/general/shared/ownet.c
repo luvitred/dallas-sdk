@@ -115,6 +115,7 @@ SMALLINT owNext(int portnum, SMALLINT do_reset, SMALLINT alarm_only)
    serial_byte_number = 0;
    serial_byte_mask = 1;
    next_result = 0;
+   lastcrc8 = 0;
    setcrc8(portnum,0);
 
    // if the last call was not the last one
